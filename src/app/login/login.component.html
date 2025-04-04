@@ -1,0 +1,15 @@
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+  <form (ngSubmit)="login()">
+    <div>
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" [(ngModel)]="usuario" name="usuario" required />
+    </div>
+    <div>
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" [(ngModel)]="contrasena" name="contrasena" required />
+    </div>
+    <button type="submit">Ingresar</button>
+  </form>
+  <p *ngIf="error" class="error">{{ error }}</p>
+</div>
